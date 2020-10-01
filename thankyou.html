@@ -1,0 +1,143 @@
+<html>
+<head><title> Mail Recived Autheticate</title>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<style>
+        
+        
+            @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+                @keyframes showTopText {
+          0% { transform: translate3d(0, 100%, 0); }
+          40%, 60% { transform: translate3d(0, 50%, 0); }
+          100% { transform: translate3d(0, 0, 0); }
+        }
+        @keyframes showBottomText {
+          0% { transform: translate3d(0, -100%, 0); }
+          100% { transform: translate3d(0, 0, 0); }
+        }
+        .animated-title {
+          color: #222;
+          font-family: Roboto, Arial, sans-serif;
+          height: 90vmin;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 80vmin;
+
+        }
+        .animated-title > div {
+          height: 50%;
+          overflow: hidden;
+          position: absolute;
+          width: 120%;
+        }
+        .animated-title > div div {
+          font-size: 12vmin;
+          padding: 2vmin 0;
+          position: absolute;
+        }
+        .animated-title > div div span {
+          display: block;
+        }
+        .animated-title > div.text-top {
+          border-bottom: 1vmin solid #000;
+          top: 0;
+        }
+        .animated-title > div.text-top div {
+          animation: showTopText 1s;
+          animation-delay: 0.5s;
+          animation-fill-mode: forwards;
+          bottom: 0;
+          transform: translate(0, 100%);
+
+         font-size: 30px;
+        }
+        .animated-title > div.text-top div span:first-child {
+          color: #767676;
+        }
+        .animated-title > div.text-bottom {
+          bottom: 0;
+        }
+        .animated-title > div.text-bottom div {
+          animation: showBottomText 0.5s;
+          animation-delay: 1.75s;
+          animation-fill-mode: forwards;
+          top: 0;
+          transform: translate(0, -100%);
+
+         font-size: 30px;
+
+        }
+                body{
+                      background-image: url('bg.jpg'); 
+                      background-repeat: no-repeat;
+                      background-size: cover;
+                }
+                #email{ margin-left: 320px;
+                    margin-top: 6px;        }
+
+                .navbar-brand{
+                    margin-bottom: 14px;
+                    margin-right: 50px;
+                }
+
+
+    
+    </style>
+    
+    </head>
+    
+    
+    <body>
+        
+
+                <script>
+                    // dropdown animation
+                    $('.navbar .dropdown').hover(function () {
+                        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown(100);
+                    }, function () {
+                        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp(100);
+                    });
+
+                    $('#signup-link').on('click', function (e) {
+                        e.preventDefault();
+
+                        $(".login-wrapper").css('left', '-200%');
+                        $(".signup-wrapper").css('left', '50%');
+                    });
+                    $('#login-link').on('click', function (e) {
+                        e.preventDefault();
+
+                        $(".signup-wrapper").css('left', '200%');
+                        $(".login-wrapper").css('left', '50%');
+                    });
+                </script>
+
+
+
+
+
+
+                <div class="animated-title">
+                  <div class="text-top">
+                    <div>
+                      <span>Thanks for entering details</span>
+                      <span>You're almost there! We sent an email to your registered mail</span>
+                    </div>
+                  </div>
+                  <div class="text-bottom">
+                    <div>Still can't find the mail</div>
+                    <div id = email><button type="button" class="btn btn-success">Resend-Email</button></div>
+
+                  </div>
+                </div>
+<!--<img src="./assets/backgrounds/rotate-elipse1.png" class="img-fluid landing-rotate" alt="">-->
+       
+</body>
+</html>
